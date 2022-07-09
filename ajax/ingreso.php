@@ -56,9 +56,9 @@ switch ($_GET["op"]) {
 			<td></td>
 			<td>'.$reg->nombre.'</td>
 			<td>'.$reg->cantidad.'</td>
-			<td>'.$reg->precio_compra.'</td>
-			<td>'.$reg->precio_venta.'</td>
-			<td>'.$reg->precio_compra*$reg->cantidad.'</td>
+			<td>'.'S/ '.number_format($reg->precio_compra,2,".",",").'</td>
+			<td>'.'S/ '.number_format($reg->precio_venta,2,".",",").'</td>
+			<td>'.'S/ '.number_format($reg->precio_compra*$reg->cantidad,2,".",",").'</td>
 			<td></td>
 			</tr>';
 			$total=$total+($reg->precio_compra*$reg->cantidad);
@@ -69,7 +69,7 @@ switch ($_GET["op"]) {
          <th></th>
          <th></th>
          <th></th>
-         <th><h4 id="total">S/. '.$total.'</h4><input type="hidden" name="total_compra" id="total_compra"></th>
+         <th><h4 id="total">S/. '.number_format($total,2,".",",").'</h4><input type="hidden" name="total_compra" id="total_compra"></th>
        </tfoot>';
 		break;
 
@@ -85,7 +85,7 @@ switch ($_GET["op"]) {
             "3"=>$reg->usuario,
             "4"=>$reg->tipo_comprobante,
             "5"=>$reg->serie_comprobante. '-' .$reg->num_comprobante,
-            "6"=>$reg->total_compra,
+            "6"=>'S/ '.number_format($reg->total_compra,2,".",","),
             "7"=>($reg->estado=='Aceptado')?'<span class="label bg-green">Aceptado</span>':'<span class="label bg-red">Anulado</span>'
               );
 		}

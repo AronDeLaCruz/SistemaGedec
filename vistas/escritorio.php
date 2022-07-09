@@ -13,11 +13,11 @@ if ($_SESSION['escritorio']==1) {
 
   require_once "../modelos/Consultas.php";
   $consulta = new Consultas();
-  $rsptac = $consulta->totalcomprahoy();
+  $rsptac = $consulta->totalcompra();
   $regc=$rsptac->fetch_object();
   $totalc=$regc->total_compra;
 
-  $rsptav = $consulta->totalventahoy();
+  $rsptav = $consulta->totalventa();
   $regv=$rsptav->fetch_object();
   $totalv=$regv->total_venta;
 
@@ -60,7 +60,7 @@ if ($_SESSION['escritorio']==1) {
         <div class="col-md-12">
       <div class="box">
 <div class="box-header with-border">
-  <h1 class="box-title">Escritorio</h1>
+  <h1 class="box-title">Dashboard</h1>
   <div class="box-tools pull-right">
     
   </div>
@@ -74,7 +74,7 @@ if ($_SESSION['escritorio']==1) {
       <h4 style="font-size: 17px;">
         <strong>S/. <?php echo $totalc; ?> </strong>
       </h4>
-      <p>Compras</p>
+      <p>Compras Totales</p>
     </div>
     <div class="icon">
       <i class="ion ion-bag"></i>
@@ -88,7 +88,7 @@ if ($_SESSION['escritorio']==1) {
       <h4 style="font-size: 17px;">
         <strong>S/. <?php echo $totalv; ?> </strong>
       </h4>
-      <p>Ventas</p>
+      <p>Ventas Totales</p>
     </div>
     <div class="icon">
       <i class="ion ion-bag"></i>

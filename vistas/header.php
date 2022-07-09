@@ -95,7 +95,7 @@ if (strlen(session_id())<1)
 <br>
        <?php 
 if ($_SESSION['escritorio']==1) {
-  echo ' <li><a href="escritorio.php"><i class="fa  fa-dashboard (alias)"></i> <span>Escritorio</span></a>
+  echo ' <li><a href="escritorio.php"><i class="fa  fa-dashboard (alias)"></i> <span>Dashboard</span></a>
         </li>';
 }
         ?>
@@ -197,9 +197,9 @@ if ($_SESSION['consultav']==1) {
         </li>';
 }
         ?>     
-            
+ 
         
-        <li><a href=""><i class="fa fa-question-circle"></i> <span>Ayuda</span><small class="label pull-right bg-yellow">PDF</small></a></li>
+        <li><a href="https://www.gedecsac.com/" target=_blank><i class="fa fa-question-circle"></i> <span>Ayuda</span><small class="label pull-right bg-yellow">WEB</small></a></li>
         
       </ul>
     </section>

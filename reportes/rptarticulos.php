@@ -32,11 +32,11 @@ $pdf->Ln(10);
 //creamos las celdas para los titulos de cada columna y le asignamos un fondo gris y el tipo de letra
 $pdf->SetFillColor(232,232,232);
 $pdf->SetFont('Arial','B',10);
-$pdf->Cell(58,6,'Nombre',1,0,'C',1);
-$pdf->Cell(50,6,utf8_decode('Categoría'),1,0,'C',1);
+$pdf->Cell(70,6,'Nombre',1,0,'C',1);
+$pdf->Cell(35,6,utf8_decode('Categoría'),1,0,'C',1);
 $pdf->Cell(30,6,utf8_decode('Código'),1,0,'C',1);
-$pdf->Cell(12,6,'Stock',1,0,'C',1);
-$pdf->Cell(35,6,utf8_decode('Descripcion'),1,0,'C',1);
+$pdf->Cell(18,6,'Stock',1,0,'C',1);
+$pdf->Cell(35,6,utf8_decode('Descripción'),1,0,'C',1);
 $pdf->Ln(10);
 
 //creamos las filas de los registros según la consulta mysql
@@ -46,7 +46,7 @@ $articulo = new Articulo();
 $rspta = $articulo->listar();
 
 //implementamos las celdas de la tabla con los registros a mostrar
-$pdf->SetWidths(array(58,50,30,12,35));
+$pdf->SetWidths(array(70,35,30,18,35));
 
 while ($reg= $rspta->fetch_object()) {
 	$nombre=$reg->nombre;
