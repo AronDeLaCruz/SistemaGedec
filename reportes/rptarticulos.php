@@ -59,6 +59,8 @@ while ($reg= $rspta->fetch_object()) {
 	$pdf->Row(array(utf8_decode($nombre),utf8_decode($categoria),$codigo,$stock,utf8_decode($descripcion)));
 }
 
+//$pdf->Cell(35,6,utf8_decode('SELECT SUM($stock) FROM $articulo'),1,0,'C',1);
+
 //mostramos el documento pdf
 $pdf->Output();
 

@@ -180,6 +180,43 @@ if ($_SESSION['consultac']==1) {
         </li>';
 }
         ?>  
+
+
+<?php 
+if ($_SESSION['consultav']==1) {
+  echo '<li class="treeview">
+          <a href="#">
+            <i class="fa fa-bar-chart"></i> <span>Indicadores</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="rotacionproductos.php"><i class="fa fa-circle-o"></i> Rotacion de Productos</a></li>
+            <li><a href="capacidadproduccion.php"><i class="fa fa-circle-o"></i> Capacidad de Produccion</a></li>
+            <li><a href="exactitudinventarios.php"><i class="fa fa-circle-o"></i> Exactitud de Inventarios</a></li>
+          </ul>
+        </li>';
+}
+        ?>     
+
+<?php 
+if ($_SESSION['consultav']==1) {
+  echo '<li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Tablas</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="tablarotacionproductos.php"><i class="fa fa-circle-o"></i> Rotacion de Productos</a></li>
+            <li><a href="capacidadproduccion.php"><i class="fa fa-circle-o"></i> Capacidad de Produccion</a></li>
+            <li><a href="exactitudinventarios.php"><i class="fa fa-circle-o"></i> Exactitud de Inventarios</a></li>
+          </ul>
+        </li>';
+}
+        ?>             
               
                                                 <?php 
 if ($_SESSION['consultav']==1) {

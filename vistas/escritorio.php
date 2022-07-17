@@ -38,7 +38,7 @@ if ($_SESSION['escritorio']==1) {
 
 
     //obtener valores para cargar al grafico de barras
-  $ventas12 = $consulta->ventasultimos_12meses ();
+  $ventas12 = $consulta->ventasultimos_12meses();
   $fechasv='';
   $totalesv='';
   while ($regfechav=$ventas12->fetch_object()) {
@@ -59,12 +59,12 @@ if ($_SESSION['escritorio']==1) {
       <div class="row">
         <div class="col-md-12">
       <div class="box">
-<div class="box-header with-border">
-  <h1 class="box-title">Dashboard</h1>
-  <div class="box-tools pull-right">
-    
-  </div>
-</div>
+        <div class="box-header with-border">
+          <h1 class="box-title">Dashboard</h1>
+          <div class="box-tools pull-right">
+            
+          </div>
+        </div>
 <!--box-header-->
 <!--centro-->
 <div class="panel-body">
@@ -98,26 +98,26 @@ if ($_SESSION['escritorio']==1) {
 </div>
 </div>
 <div class="panel-body">
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-  <div class="box box-primary">
-    <div class="box-header with-border">
-      Compras de los ultimos 10 dias
-    </div>
-    <div class="box-body">
-      <canvas id="compras" width="400" height="300"></canvas>
-    </div>
-  </div>
-</div>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-  <div class="box box-primary">
-    <div class="box-header with-border">
-      Ventas de los ultimos 12 meses
-    </div>
-    <div class="box-body">
-      <canvas id="ventas" width="400" height="300"></canvas>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        Compras de los ultimos 10 dias
+      </div>
+      <div class="box-body">
+        <canvas id="compras" width="400" height="300"></canvas>
+      </div>
     </div>
   </div>
-</div>
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        Ventas de los ultimos 12 meses
+      </div>
+      <div class="box-body">
+        <canvas id="ventas" width="400" height="300"></canvas>
+      </div>
+    </div>
+  </div>
 </div>
 <!--fin centro-->
       </div>
