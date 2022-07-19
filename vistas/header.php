@@ -14,7 +14,6 @@ if (strlen(session_id())<1)
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../public/css/bootstrap.min.css">
   <!-- Font Awesome -->
-
   <link rel="stylesheet" href="../public/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
@@ -211,8 +210,8 @@ if ($_SESSION['consultav']==1) {
           </a>
           <ul class="treeview-menu">
             <li><a href="tablarotacionproductos.php"><i class="fa fa-circle-o"></i> Rotacion de Productos</a></li>
-            <li><a href="capacidadproduccion.php"><i class="fa fa-circle-o"></i> Capacidad de Produccion</a></li>
-            <li><a href="exactitudinventarios.php"><i class="fa fa-circle-o"></i> Exactitud de Inventarios</a></li>
+            <li><a href="tablacapacidadproduccion.php"><i class="fa fa-circle-o"></i> Capacidad de Produccion</a></li>
+            <li><a href="tablaexactitudinventarios.php"><i class="fa fa-circle-o"></i> Exactitud de Inventarios</a></li>
           </ul>
         </li>';
 }

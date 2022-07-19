@@ -65,18 +65,13 @@ function mostrarform(flag){
 }
 
 
-//funcion listar
+//funcion listar--sequueda
 function listar(){
 	tabla=$('#tbllistado').dataTable({
 		"aProcessing": true,//activamos el procedimiento del datatable
 		"aServerSide": true,//paginacion y filrado realizados por el server
 		dom: 'Bfrtip',//definimos los elementos del control de la tabla
-		buttons: [
-                  'copyHtml5',
-                  'excelHtml5',
-                  'csvHtml5',
-                  'pdf'
-		],
+		
 		"ajax":
 		{
 			url:'../ajax/ingreso.php?op=listar',
@@ -87,7 +82,7 @@ function listar(){
 			}
 		},
 		"bDestroy":true,
-		"iDisplayLength":5,//paginacion
+		"iDisplayLength":14,//paginacion
 		"order":[[0,"desc"]]//ordenar (columna, orden)
 	}).DataTable();
 }
@@ -145,17 +140,7 @@ function mostrar(idingreso){
 }
 
 
-//funcion para desactivar
-function anular(idingreso){
-	bootbox.confirm("¿Esta seguro de desactivar este dato?", function(result){
-		if (result) {
-			$.post("../ajax/ingreso.php?op=anular", {idingreso : idingreso}, function(e){
-				bootbox.alert(e);
-				tabla.ajax.reload();
-			});
-		}
-	})
-}
+
 
 //declaramos variables necesarias para trabajar con las compras y sus detalles
 var impuesto=18;
@@ -176,25 +161,5 @@ function marcarImpuesto(){
 
 
 
-
-function evaluar(){
-
-	if (detalles>0) 
-	{
-		$("#btnGuardar").show();
-	}
-	else
-	{
-		$("#btnGuardar").hide();
-		cont=0;
-	}
-}
-
-function eliminarDetalle(indice){
-$("#fila"+indice).remove();
-calcularTotales();
-detalles=detalles-1;
-
-}
 
 init();

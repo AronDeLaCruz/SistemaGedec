@@ -12,7 +12,7 @@ require 'header.php';
 require "../config/Conexion.php";
 class Tablas{
   public function listar(){
-    $sql="SELECT * FROM rotacion where month(fecha)=4;  ";
+    $sql="SELECT * FROM rotacion where month(fecha)=6;  ";
     return ejecutarConsulta($sql);
   }
 }
@@ -30,7 +30,7 @@ $tablas10 = $tablas->listar();
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h1 class="box-title">Rotacion de productos - PreTest</h1>
+                        <h1 class="box-title">Exactitud de inventarios - PosTest</h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -38,12 +38,12 @@ $tablas10 = $tablas->listar();
                       <nav class="navbar navbar-expand">
                         <ul class="navbar-nav">
                           <li class="nav-item" style="margin-right:1px; list-style-type: none;">
-                            <a class="btn btn-info btn-sm nav-link active" href="tablarotacionproductos.php">
+                            <a class="btn btn-info btn-sm nav-link active" type="button" href="tablaexactitudinventarios.php">
                               PreTest
                             </a>
                           </li>
-                          <li class="nav-item" style="margin-right:1px; list-style-type: none;">
-                            <a class="btn btn-primary btn-sm nav-link" href="tablarotacionproductospost.php">
+                          <li class="nav-item" style="margin-right:20px; list-style-type: none;">
+                            <a class="btn btn-primary btn-sm nav-link" href="tablaexactitudinventariospost.php">
                               PosTest
                             </a>
                           </li>

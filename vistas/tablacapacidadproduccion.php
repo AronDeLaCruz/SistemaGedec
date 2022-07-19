@@ -30,7 +30,7 @@ $tablas10 = $tablas->listar();
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h1 class="box-title">Rotacion de productos - PreTest</h1>
+                        <h1 class="box-title">Capacidad de produccion - PreTest</h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -38,12 +38,12 @@ $tablas10 = $tablas->listar();
                       <nav class="navbar navbar-expand">
                         <ul class="navbar-nav">
                           <li class="nav-item" style="margin-right:1px; list-style-type: none;">
-                            <a class="btn btn-info btn-sm nav-link active" href="tablarotacionproductos.php">
-                              PreTest
+                            <a class="btn btn-info btn-sm nav-link active" type="button" href="tablacapacidadproduccion.php">
+                              PreTest1
                             </a>
                           </li>
-                          <li class="nav-item" style="margin-right:1px; list-style-type: none;">
-                            <a class="btn btn-primary btn-sm nav-link" href="tablarotacionproductospost.php">
+                          <li class="nav-item" style="margin-right:20px; list-style-type: none;">
+                            <a class="btn btn-primary btn-sm nav-link" href="tablacapacidadproduccionpost.php">
                               PosTest
                             </a>
                           </li>
@@ -54,7 +54,7 @@ $tablas10 = $tablas->listar();
                       <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                         <thead>
 
-                          <th>Fecha</th>
+                          <th>Fechaaaa</th>
                           <th>Proveedor</th>
                           <th>Usuario</th>
                           <th>Documento</th>
