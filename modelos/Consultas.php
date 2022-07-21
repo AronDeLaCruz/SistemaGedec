@@ -17,32 +17,32 @@ public function comprasfecha($fecha_inicio,$fecha_fin){
 
 public function rotacionproductos(){
 	//$sql="SELECT CONCAT(DAY(fecha_hora),'-',MONTH(fecha_hora)) AS fecha, SUM(total_venta) AS total FROM venta GROUP BY fecha_hora ORDER BY fecha_hora LIMIT 0,14;";
-	$sql="SELECT CONCAT(DAY(v.fecha_hora),'-',MONTH(v.fecha_hora)) AS fecha, (d.precio_venta/avg(a.stock))*100 AS indicador FROM ((detalle_venta d INNER JOIN venta v ON v.idventa=d.idventa) INNER JOIN articulo a on d.idarticulo=a.idarticulo) GROUP BY fecha_hora ORDER BY fecha_hora LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion2 WHERE idrotacion BETWEEN 1 and 21 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 
 public function rotacionproductospost(){
-	$sql="SELECT CONCAT(DAY(fecha),'-',MONTH(fecha)) AS fecha, indicador AS indicador FROM rotacion WHERE MONTH(fecha)=6 GROUP BY fecha ORDER BY fecha LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion2 WHERE idrotacion BETWEEN 22 and 42 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 
 public function capacidadproduccionpre(){
-	$sql="SELECT CONCAT(DAY(fecha),'-',MONTH(fecha)) AS fecha, indicador AS indicador FROM rotacion WHERE MONTH(fecha)=4 GROUP BY fecha ORDER BY fecha LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion WHERE idrotacion BETWEEN 1 and 21 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 
 public function capacidadproduccionpost(){
-	$sql="SELECT CONCAT(DAY(fecha),'-',MONTH(fecha)) AS fecha, indicador AS indicador FROM rotacion WHERE MONTH(fecha)=6 GROUP BY fecha ORDER BY fecha LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion WHERE idrotacion BETWEEN 22 and 42 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 
 public function exactitudinventarios(){
-	$sql="SELECT CONCAT(DAY(v.fecha_hora),'-',MONTH(v.fecha_hora)) AS fecha, (d.precio_venta/avg(a.stock))*100 AS indicador FROM ((detalle_venta d INNER JOIN venta v ON v.idventa=d.idventa) INNER JOIN articulo a on d.idarticulo=a.idarticulo) GROUP BY fecha_hora ORDER BY fecha_hora LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion3 WHERE idrotacion BETWEEN 1 and 21 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 
 public function exactitudinventariospost(){
-	$sql="SELECT CONCAT(DAY(fecha),'-',MONTH(fecha)) AS fecha, indicador AS indicador FROM rotacion WHERE MONTH(fecha)=6 GROUP BY fecha ORDER BY fecha LIMIT 0,14;";
+	$sql="SELECT marca AS fecha, indicador AS indicador FROM rotacion3 WHERE idrotacion BETWEEN 22 and 42 LIMIT 0,14;";
 	return ejecutarConsulta($sql);
 }
 

@@ -180,6 +180,22 @@ if ($_SESSION['consultac']==1) {
 }
         ?>  
 
+<?php 
+if ($_SESSION['consultav']==1) {
+  echo '<li class="treeview">
+          <a href="#">
+            <i class="fa fa-bar-chart"></i> <span>Consulta Ventas</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="ventasfechacliente.php"><i class="fa fa-circle-o"></i> Consulta Ventas</a></li>
+
+          </ul>
+        </li>';
+}
+        ?>     
 
 <?php 
 if ($_SESSION['consultav']==1) {
@@ -217,22 +233,7 @@ if ($_SESSION['consultav']==1) {
 }
         ?>             
               
-                                                <?php 
-if ($_SESSION['consultav']==1) {
-  echo '<li class="treeview">
-          <a href="#">
-            <i class="fa fa-bar-chart"></i> <span>Consulta Ventas</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="ventasfechacliente.php"><i class="fa fa-circle-o"></i> Consulta Ventas</a></li>
-
-          </ul>
-        </li>';
-}
-        ?>     
+               
  
         
         <li><a href="https://www.gedecsac.com/" target=_blank><i class="fa fa-question-circle"></i> <span>Ayuda</span><small class="label pull-right bg-yellow">WEB</small></a></li>

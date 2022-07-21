@@ -12,7 +12,7 @@ require 'header.php';
 require "../config/Conexion.php";
 class Tablas{
   public function listar(){
-    $sql="SELECT * FROM rotacion where month(fecha)=4;  ";
+    $sql="SELECT * FROM rotacion2 where idrotacion BETWEEN 1 and 21   ";
     return ejecutarConsulta($sql);
   }
 }
@@ -30,7 +30,7 @@ $tablas10 = $tablas->listar();
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h1 class="box-title">Rotacion de productos - PreTest</h1>
+                        <h2><center><b>ROTACIÓN DE PRODUCTOS - PRETEST</b></center></h2>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -54,13 +54,11 @@ $tablas10 = $tablas->listar();
                       <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                         <thead>
 
-                          <th>Fecha</th>
-                          <th>Proveedor</th>
-                          <th>Usuario</th>
-                          <th>Documento</th>
-                          <th>Número</th>
-                          <th>Total Compra</th>
-
+                          <th>Producto</th>
+                          <th>Cantidad</th>
+                          <th>Ventas Acumuladas</th>
+                          <th>Inventario Promedio</th>
+                          <th>Valor del indicador</th>
                         </thead>
                           <?php
                               // LOOP TILL END OF DATA
@@ -68,11 +66,11 @@ $tablas10 = $tablas->listar();
                               {
                           ?>
                         <tbody>
-                          <td><?php echo $rows['idrotacion'];?></td>
-                          <td><?php echo $rows['fecha'];?></td>
-                          <td><?php echo $rows['inventario'];?></td>
-                          <td><?php echo $rows['vd'];?></td>
-                          <td><?php echo $rows['cantidad2'];?></td>
+                        <td><?php echo $rows['marca'];?></td>
+                          <td><?php echo $rows['cantidad'];?></td>
+                          <td><?php echo $rows['ventasa'];?></td>
+                          <td><?php echo $rows['invpro'];?></td>
+
                           <td><?php echo $rows['indicador'];?></td>
 
                         </tbody>
@@ -81,13 +79,11 @@ $tablas10 = $tablas->listar();
                           ?>     
                         <tfoot>
 
-                          <th>Fecha</th>
-                          <th>Proveedor</th>
-                          <th>Usuario</th>
-                          <th>Documento</th>
-                          <th>Número</th>
-                          <th>Total Compra</th>
-
+                          <th>Producto</th>
+                          <th>Cantidad</th>
+                          <th>Ventas Acumuladas</th>
+                          <th>Inventario Promedio</th>
+                          <th>Valor del indicador</th>
                         </tfoot>   
                       </table>
                     </div>         

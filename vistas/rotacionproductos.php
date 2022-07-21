@@ -47,7 +47,7 @@ $totalesv=substr($totalesv, 0,-1);
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-header with-border">
-                        <h1 class="box-title">Rotacion de productos</h1>
+                        <h2><center><b>INDICADOR ROTACIÓN DE PRODUCTOS</b></center></h2>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -55,7 +55,7 @@ $totalesv=substr($totalesv, 0,-1);
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                Compras de los ultimos 10 dias
+                                PRETEST - ROTACIÓN DE PRODUCTOS
                                 </div>
                                 <div class="box-body">
                                 <canvas id="pretest" width="400" height="300"></canvas>
@@ -66,7 +66,7 @@ $totalesv=substr($totalesv, 0,-1);
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="box box-primary">
                                 <div class="box-header with-border">
-                                    Compras de los ultimos 10 dias
+                                    POSTTEST - ROTACIÓN DE PRODUCTOS
                                 </div>
                                 <div class="box-body">
                                     <canvas id="postest" width="400" height="300"></canvas>
@@ -93,6 +93,7 @@ require 'footer.php';
 
 <script src="../public/js/Chart.bundle.min.js"></script>
 <script src="../public/js/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 <script>
 var ctx = document.getElementById("pretest").getContext('2d');
 var compras = new Chart(ctx, {
@@ -144,6 +145,12 @@ var compras = new Chart(ctx, {
         }]
     },
     options: {
+        plugins:{
+        datalabels: {
+        anchor: 'end',
+        align: 'top'        
+        }
+      },
         scales: {
             yAxes: [{
                 ticks: {
@@ -198,6 +205,12 @@ var postest = new Chart(ctx, {
         }]
     },
     options: {
+        plugins:{
+        datalabels: {
+        anchor: 'end',
+        align: 'top'        
+        }
+      },
         scales: {
             yAxes: [{
                 ticks: {
